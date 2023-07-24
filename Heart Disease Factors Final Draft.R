@@ -27,11 +27,11 @@ corr_df <- df %>% select(age, glucose, heartRate, cigsPerDay, totChol,
                          sysBP, diaBP, BMI)
 corr_df <- drop_na(corr_df)
 
-# Define UI for the Shiny app
+# Shiny App User Interface
 ui <- fluidPage(
   titlePanel("Heart Disease Factors"),
   
-  # Create a tabset panel with three tabs
+  # Create a tabset panel for three tabs
   tabsetPanel(
     
     # First tab - Table View
@@ -93,7 +93,7 @@ ui <- fluidPage(
 
 
 
-# Define server logic
+# Shiny App Server Logic Code
 server <- function(input, output) {
   
   # Full Data View
@@ -147,5 +147,5 @@ server <- function(input, output) {
 
 }
 
-# Run the Shiny app
+# Run Shinny App
 shinyApp(ui, server)
